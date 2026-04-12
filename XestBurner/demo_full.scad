@@ -2,26 +2,7 @@ include <src/main.scad>
 
 include <src/bounds.scad>
 
-module xb_hardware() {
-    color(c_yl) xb_he_bolts();
-    color(c_yl) xb_du_bolts();
-    color(c_yl) xb_fh_bolts();
-    color(c_yl) xb_cr_belt_pin();
-    color(c_yl) xb_fp_bolts();
-
-}
-
-module mgn12() {
-    color(c_pl) xb_cr_mgn12h();
-    translate([0,8.5,0])
-        ven_mgn12h(100);
-}
-
-module mgn9() {
-    color(c_pl) xb_cr_mgn9h();
-    translate([0,8,0])
-        ven_mgn9h(100);
-}
+include <_demo_utils.scad>
 
 module xb_base() {
     color(c_gl) xb_em();
@@ -93,4 +74,5 @@ module demo() {
     translate([-32,0,0])
         palladium();
 }
+
 demo();
