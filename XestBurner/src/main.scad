@@ -23,7 +23,7 @@ c_ve = [0.8,0.8,0.0,0.6];
 
 include <./carriage.scad>
 include <./extruder.scad>
-include <./fan_housing.scad>
+include <./housing.scad>
 include <./hotend.scad>
 include <./probe.scad>
 include <./ducts.scad>
