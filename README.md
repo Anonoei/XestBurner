@@ -5,6 +5,12 @@ A light modular toolhead designed in OpenSCAD
 
 **This is WORK-IN-PROGRESS**
 
+## Links
+- [Description](#description)
+- [BOM](#bom)
+- [STLs](#stls)
+- [Assembly Guide](ASSEMBLY.md)
+
 ## Description
 XestBurner is meant to be as small as possible, maximizing available print space, while also being modular and allowing components to be switched with minimal tweaks to the toolhead.
 
