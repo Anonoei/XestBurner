@@ -3,7 +3,7 @@ A light modular toolhead designed in OpenSCAD
 
 ![image](XestBurner/media/demo_full.png)
 
-## **This is WORK-IN-PROGRESS**
+**This is WORK-IN-PROGRESS**
 
 ## Description
 XestBurner is meant to be as small as possible, maximizing available print space, while also being modular and allowing components to be switched with minimal tweaks to the toolhead.
@@ -34,15 +34,16 @@ This toolhead was designed around having a similar footprint to DragonBurner, su
 - Hardware:
   - 2x 4010 fans (sides of housing)
   - 1x 2510 fan (front of housing)
-  - 6x M3x4x5 (Voron) heatsets
-    - 2 for housing brace, 2 for hotend/extruder, 2 for probe
+  - 8x M3x4x5 (Voron) heatsets
+    - 6x for carriage, 2 for housing brace, 2 for hotend/extruder, 2 for probe
+    - 2x for hotend mount
   - 2x M3x30 pins (inside the carriage for belts)
   - 2x SHCS/BHCS M3x6 (faceplate, into 2x heatsets on the hotend mount)
     - M3x8 probably works
   - 6x SHCS/BHCS M3x8
     - 4x: faceplate, into 2510 fan
     - 2x: probe mount, into 2x heatsets on the bottom of the carriage
-  - 4x SHCS M3x16 (housing ducts, 2 go through the 4010 fans)
+  - 4x SHCS M3x16 (housing ducts, through the 4010 fans)
   - 2x SHCS M3x30 (hotend mount, into 2x heatsets on the front of the carriage)
 - Variants
   - Carriage
@@ -52,7 +53,7 @@ This toolhead was designed around having a similar footprint to DragonBurner, su
       - 4x SHCS M3x8 (?)
   - Extruder
     - Sherpa Mini
-      - 3x M3x4x5 heatsets
+      - 2x M3x4x5 heatsets
       - 2x SHCS M3x8 (?)
   - Probe
     - Klicky PCB
