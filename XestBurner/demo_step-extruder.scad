@@ -10,3 +10,7 @@ module demo_extruder() {
 }
 
 demo_extruder();
+
+$vpt = xb_vpt;
+$vpr = xb_vpr;
+$vpd = xb_vpd;

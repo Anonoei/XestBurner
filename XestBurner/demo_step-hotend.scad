@@ -10,3 +10,7 @@ module demo_hotend() {
 }
 
 demo_hotend();
+
+$vpt = xb_vpt;
+$vpr = xb_vpr;
+$vpd = xb_vpd;

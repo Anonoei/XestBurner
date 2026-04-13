@@ -1,48 +1,62 @@
-module xb_cr_hs_he() { // Hotend/Extruder holes
+module xb_cr_hs_he(H=0) { // Hotend/Extruder holes
     module _xb_cr_he() {
         rotate([90,0,0])
             translate([d_m_he_w/2,d_m_he_h,0])
-                heatset_m3x4(H=20);
+                heatset_m3x4(H=H);
     }
     _xb_cr_he();
     mirror([d_m_he_w/2,0,0])
         _xb_cr_he();
 }
 
-module xb_cr_hs_fh() { // Fan housing holes
+module xb_cr_hs_fh(H=0) { // Fan housing holes
     module _xb_cr_fh() {
         rotate([90,0,0])
             translate([d_m_fh_w/2, d_m_fh_h,0])
-                heatset_m3x4(H=20);
+                heatset_m3x4(H=H);
     }
     _xb_cr_fh();
     mirror([d_m_he_w/2,0,0])
         _xb_cr_fh();
 }
 
-module xb_cr_hs_pr() { // Probe mounting holes
-    translate([(d_cr_pr_o-d_cr_pr_w)/2, d_cr_d/2+d_cr_pr_d-d_m_pr_o,(-d_cr_hb + d_cr_pr_h)+4])
-        heatset_m3x4(H=1);
+module xb_cr_hs_pr(H=0) { // Probe mounting holes
+    module _xb_cr_pr() {
+        translate([(d_cr_pr_o-d_cr_pr_w)/2, d_cr_pr_d-d_m_pr_o,(-d_cr_hb + d_cr_pr_h)+4.5])
+            heatset_m3x4(H=H);
+    }
+    _xb_cr_pr();
+    mirror([d_cr_w/2,0,0])
+        _xb_cr_pr();
+}
+
+module xb_cr_heatsets() {
+    xb_cr_hs_he();
+    xb_cr_hs_fh();
+    xb_cr_hs_pr();
 }
 
 module xb_cr_pr() { // Probe mount
     module _xb_cr_pr() {
-        difference() {
-            translate([(d_cr_pr_o-d_cr_pr_w)/2,0,-d_cr_hb + d_cr_pr_h*2])
+        module _xb_cr_pr_mount() {
+            translate([(d_cr_pr_o-d_cr_pr_w)/2,-d_cr_d/2,-d_cr_hb + d_cr_pr_h*2])
             union() {
                 translate([0,0,0])
                     cube([d_cr_pr_w,d_cr_d,d_cr_pr_h], center=true);
                 translate([0,(d_cr_pr_d+d_cr_d)/2,0])
                     cube([d_cr_pr_w,d_cr_pr_d,d_cr_pr_h], center=true);
             }
-            xb_cr_hs_pr();
+        }
+        difference() {
+            union() {
+                _xb_cr_pr_mount();
+                mirror([d_cr_w/2,0,0])
+                    _xb_cr_pr_mount();
+            }
+            xb_cr_hs_pr(H=1);
         }
     }
-    translate([0,-d_cr_d/2,0]) {
-        _xb_cr_pr();
-        mirror([d_cr_w/2,0,0])
-            _xb_cr_pr();
-    }
+    _xb_cr_pr();
 }
 
 module xb_cr_em() { // Extruder mount
@@ -165,7 +179,7 @@ module xb_cr() {
     union() {
         difference() {
             xb_cr_base();
-            xb_cr_hs_he(); xb_cr_hs_fh();
+            xb_cr_hs_he(H=20); xb_cr_hs_fh(H=20);
             xb_cr_pr_wire_cut();
             xb_cr_belt_cut();
             xb_cr_pr_cut();

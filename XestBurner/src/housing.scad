@@ -160,6 +160,7 @@ module xb_fh() {
 
     // _xb_fh_2510();
 
+    union()
     difference() {
         translate([0,-42.01 - d_cr_d,-.5])
         union() {

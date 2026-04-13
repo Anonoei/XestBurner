@@ -10,3 +10,7 @@ module demo_probe() {
 }
 
 demo_probe();
+
+$vpt = xb_vpt;
+$vpr = xb_vpr;
+$vpd = xb_vpd;

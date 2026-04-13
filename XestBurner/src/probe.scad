@@ -1,10 +1,15 @@
-module xb_pr() {
-    module _xb_pr_bolt() {
-        translate([(d_cr_pr_o-d_cr_pr_w)/2, d_cr_d/2+d_cr_pr_d-d_m_pr_o-3,(-d_cr_hb + d_cr_pr_h)]) {
-            translate([0,0,-5])
-                bolt_shcs_m3(h=20,v=true,he=20);
-        }
+module _xb_pr_bolt(h=12, he=0) {
+    translate([(d_cr_pr_o-d_cr_pr_w)/2, d_cr_d/2+d_cr_pr_d-d_m_pr_o-3,(-d_cr_hb + d_cr_pr_h)]) {
+        translate([0,0,-5])
+            bolt_shcs_m3(h=h,v=true,he=he);
     }
+}
+module xb_pr_bolt(h=12, he=0) {
+    _xb_pr_bolt(he=he);
+    mirror([(d_cr_pr_o-d_cr_pr_w)/2,0,0])
+        _xb_pr_bolt(h=h,he=he);
+}
+module xb_pr() {
     module _xb_pr_mount() {
         t = d_cr_pr_off + d_cr_pr_h/2;
         b = d_cr_pr_off - d_cr_pr_h/2;
@@ -30,8 +35,6 @@ module xb_pr() {
                 _xb_pr_mount();
             xb_cr_pr_cut();
         }
-        _xb_pr_bolt();
-        mirror([(d_cr_pr_o-d_cr_pr_w)/2,0,0])
-            _xb_pr_bolt();
+        xb_pr_bolt(h=20,he=20);
     }
 }

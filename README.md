@@ -10,6 +10,7 @@ XestBurner works with HF (standard, v6) hotends, and UHF (volcano) hotends.
 The HF variant measures 61x53x67 (width (x)/depth (y)/height (z)).
 
 ## BOM
+![image](XestBurner/media/demo_hardware.png)
 - Prints:
   - Housing
   - Housing Brace
@@ -41,7 +42,7 @@ The HF variant measures 61x53x67 (width (x)/depth (y)/height (z)).
       - 2x m3x4x5 heatsets
       - 2x SHCS M3x8 (?)
   - Probe
-    - 2x SHCS M3x20
+    - 2x SHCS M3x12
     - Klicky PCB
       - 3x m2.5 heatsets
   - Faceplate

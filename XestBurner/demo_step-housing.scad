@@ -12,3 +12,7 @@ module demo_housing() {
 }
 
 demo_housing();
+
+$vpt = xb_vpt;
+$vpr = xb_vpr;
+$vpd = xb_vpd;

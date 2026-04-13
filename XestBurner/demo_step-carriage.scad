@@ -10,3 +10,7 @@ module demo_carriage() {
 }
 
 demo_carriage();
+
+$vpt = xb_vpt;
+$vpr = xb_vpr;
+$vpd = xb_vpd;

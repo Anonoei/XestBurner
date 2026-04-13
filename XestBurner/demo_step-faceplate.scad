@@ -10,3 +10,7 @@ module demo_faceplate() {
 }
 
 demo_faceplate();
+
+$vpt = xb_vpt;
+$vpr = xb_vpr;
+$vpd = xb_vpd;

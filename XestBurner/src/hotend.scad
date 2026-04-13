@@ -11,11 +11,15 @@ module xb_he_bolts() {
     }
 }
 
-module xb_fp_hs() {
+module xb_he_heatsets() {
+    xb_fp_hs();
+}
+
+module xb_fp_hs(H=0) {
     module _xb_fp_hs() {
         translate([d_m_fp_w,-48,d_m_fp_h])
         rotate([-90,0,0])
-            heatset_m3x4(H=4);
+            heatset_m3x4(H=H);
     }
     _xb_fp_hs();
     mirror([1,0,0])
@@ -73,7 +77,7 @@ module xb_he() {
             cylinder(d=32,h=10);
         xb_cr_hs_he();
         xb_he_mount();
-        xb_fp_hs();
+        xb_fp_hs(H=4);
         xb_he_led();
         translate([d_cr_wt/2+0.01,-d_cr_d-2-4+0.01,d_cr_ht-10-0.01])
             cube([2,4,12]); // Right EM cutout
