@@ -1,13 +1,24 @@
 # XestBurner
-A modular 3DP toolhead designed in OpenSCAD
+A light modular toolhead designed in OpenSCAD
 
 ![image](XestBurner/media/demo_full.png)
 
+## **This is WORK-IN-PROGRESS**
+
+## Description
 XestBurner is meant to be as small as possible, maximizing available print space, while also being modular and allowing components to be switched with minimal tweaks to the toolhead.
 
 XestBurner works with HF (standard, v6) hotends, and UHF (volcano) hotends.
 
 The HF variant measures 61x53x67 (width (x)/depth (y)/height (z)).
+
+### Why?
+This toolhead was heavily inspired by the amazing work done for  [Xol](https://github.com/Armchair-Heavy-Industries/Xol-Toolhead), and [Dragonburner](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner)
+
+I switched to a CHUBE hotend, and found that none of the current toolheads supported it, along with features that are necessary, like ease-of-assembly, modular components, and being light.
+
+This toolhead was designed around having a similar footprint to DragonBurner, supporting CHUBE (and other large hotends), and using only M3 hardware.
+
 
 ## BOM
 ![image](XestBurner/media/demo_hardware.png)
@@ -15,39 +26,37 @@ The HF variant measures 61x53x67 (width (x)/depth (y)/height (z)).
   - Housing
   - Housing Brace
   - Ducts (HF or UHF)
-  - Carriage mount
-  - Hotend mount
-  - Extruder mount
-  - Probe mount
-  - Faceplate
+  - [Carriage mount](#carriage)
+  - [Hotend mount](#hotend)
+  - [Extruder mount](#extruder)
+  - [Probe mount](#probe)
+  - [Faceplate](#faceplate)
 - Hardware:
-  - Housing
-    - 2x 4010 fans
-    - 1x 2510 fan
-    - 2x SHCS M3x10
-    - Ducts
-      - 4x SHCS M3x16, 2 of these go into 4010 fans
+  - 2x 4010 fans (sides of housing)
+  - 1x 2510 fan (front of housing)
+  - 6x M3x4x5 (Voron) heatsets
+    - 2 for housing brace, 2 for hotend/extruder, 2 for probe
+  - 2x M3x30 pins (inside the carriage for belts)
+  - 2x SHCS/BHCS M3x6 (faceplate, into 2x heatsets on the hotend mount)
+    - M3x8 probably works
+  - 6x SHCS/BHCS M3x8
+    - 4x: faceplate, into 2510 fan
+    - 2x: probe mount, into 2x heatsets on the bottom of the carriage
+  - 4x SHCS M3x16 (housing ducts, 2 go through the 4010 fans)
+  - 2x SHCS M3x30 (hotend mount, into 2x heatsets on the front of the carriage)
+- Variants
   - Carriage
-    - 6x m3x4x5 heatsets
-      - 2 for housing brace, 2 for hotend/extruder, 2 for probe
-    - 2x cylindrical pins 3x30mm
     - MGN12H
       - 4x SHCS M3x8 (?)
     - MGN9H
       - 4x SHCS M3x8 (?)
-  - Hotend
-    - 2x SHCS M3x30
   - Extruder
     - Sherpa Mini
-      - 2x m3x4x5 heatsets
+      - 3x M3x4x5 heatsets
       - 2x SHCS M3x8 (?)
   - Probe
-    - 2x SHCS M3x12
     - Klicky PCB
-      - 3x m2.5 heatsets
-  - Faceplate
-    - 2x SHCS M3x6
-    - 4x SHCS M3x8, for 2510 fan (?)
+      - 3x M2.5 heatsets
 
 ## STLs
 ### Base

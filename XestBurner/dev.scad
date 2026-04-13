@@ -51,7 +51,7 @@ module xb_hf_var1() {
     color(c_sl) xb_fp();
 
     xb_b_hf();
-    // xb_hardware();
+    xb_hardware();
     // xb_heatsets();
     // color(c_yl) xb_cr_mgn12h_bolts();
 }
@@ -76,12 +76,14 @@ module demo_uhf_var1() {
 
     xb_b_uhf();
 
-    // xb_hardware();
+    xb_hardware();
     // xb_heatsets();
     // color(c_yl) xb_cr_mgn12h_bolts();
 }
 
-
 // xb_base();
 xb_hf_var1();
 // demo_uhf_var1();
+
+// xb_hardware();
+// xb_heatsets();
