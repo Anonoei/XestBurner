@@ -4,18 +4,6 @@ include <src/bounds.scad>
 
 include <_demo_utils.scad>
 
-module demo_xb_base() {
-    color(c_gl) xb_em();
-    color(c_rl) xb_he();
-    color(c_cl) xb_fh();
-    color(c_y) xb_fh_brace();
-    color(c_ol) xb_du_hf();
-    color(c_ll) xb_pr();
-    color(c_sl) xb_fp();
-    color(c_pl) xb_cr();
-    xb_hardware();
-}
-
 module demo_xb_hf() {
     color(c_gl) xb_em_sherpa_mini();
     color(c_rl) xb_he_rapido();

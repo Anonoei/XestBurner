@@ -7,6 +7,47 @@ XestBurner is meant to be as small as possible, maximizing available print space
 
 XestBurner works with HF (standard, v6) hotends, and UHF (volcano) hotends.
 
+The HF variant measures 61x53x67 (width (x)/depth (y)/height (z)).
+
+## BOM
+- Prints:
+  - Housing
+  - Housing Brace
+  - Ducts (HF or UHF)
+  - Carriage mount
+  - Hotend mount
+  - Extruder mount
+  - Probe mount
+  - Faceplate
+- Hardware:
+  - Housing
+    - 2x 4010 fans
+    - 1x 2510 fan
+    - 2x SHCS M3x10
+    - Ducts
+      - 4x SHCS M3x16, 2 of these go into 4010 fans
+  - Carriage
+    - 6x m3x4x5 heatsets
+      - 2 for housing brace, 2 for hotend/extruder, 2 for probe
+    - 2x cylindrical pins 3x30mm
+    - MGN12H
+      - 4x SHCS M3x8 (?)
+    - MGN9H
+      - 4x SHCS M3x8 (?)
+  - Hotend
+    - 2x SHCS M3x30
+  - Extruder
+    - Sherpa Mini
+      - 2x m3x4x5 heatsets
+      - 2x SHCS M3x8 (?)
+  - Probe
+    - 2x SHCS M3x20
+    - Klicky PCB
+      - 3x m2.5 heatsets
+  - Faceplate
+    - 2x SHCS M3x6
+    - 4x SHCS M3x8, for 2510 fan (?)
+
 ## STLs
 ### Base
 ![image](XestBurner/media/demo_step-housing.png)
