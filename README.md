@@ -38,8 +38,16 @@ This toolhead was designed around having a similar footprint to DragonBurner, su
   - [Probe mount](#probe)
   - [Faceplate](#faceplate)
 - Hardware:
-  - 2x 4010 fans (sides of housing)
+  - 2x 4010 blower fans (sides of housing)
+    - [WINSINN (Amazon)](https://www.amazon.com/WINSINN-Turbine-Brushless-Hydraulic-Extruder/dp/B07L2WTH7H)
+    - [West3D BERSERKER VINDR](https://west3d.com/products/berserker-vindr-ulta-performance-4010-blower-fan-24v-4010b-24v-a-40x10mm)
+    - [Fabreeko HoneyBadger](https://www.fabreeko.com/products/4010-blower-p-series-fan-by-honeybadger)
+    - [KB3D](https://kb-3d.com/store/fans/663-4010-ball-bearing-blower-fan-24v-1662421807065.html)
   - 1x 2510 fan (front of housing)
+    - [WINSINN (Amazon)](https://www.amazon.com/WINSINN-Bearings-Brushless-Cooling-25mm10mm/dp/B08R9JXMGP?tag=ustxtaddt-20&th=1)
+    - [West3D BERSERKER VINDR](https://west3d.com/products/berserker-vindr-ultra-performance-2510-axial-fan-24v-2510a-24v-a-25x10mm)
+    - [Fabreeko HoneyBadger](https://www.fabreeko.com/products/2510-performance-axial-fan-by-honeybadger)
+    - [KB3D](https://kb-3d.com/store/fans/3684-2510-ball-bearing-cooling-fan-24v-1740693669311.html)
   - 8x M3x4x5 (Voron) heatsets
     - 6x for carriage, 2 for housing brace, 2 for hotend/extruder, 2 for probe
     - 2x for hotend mount
