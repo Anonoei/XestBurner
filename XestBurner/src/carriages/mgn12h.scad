@@ -1,22 +1,26 @@
 include <../carriage.scad>
 
+module xb_cr_mgn12h_bolts(h=8) {
+    union() {
+        translate([0,-d_cr_d,0])
+        rotate([270,90,0]) {
+            translate([20/2,20/2,0])
+                bolt_shcs_m3(h=h,v=true);
+            translate([-20/2,20/2,0])
+                bolt_shcs_m3(h=h,v=true);
+            translate([20/2,-20/2,0])
+                bolt_shcs_m3(h=h,v=true);
+            translate([-20/2,-20/2,0])
+                bolt_shcs_m3(h=h,v=true);
+        }
+    }
+}
+
 module xb_cr_mgn12h() {
     // c=20, b=20
     difference() {
         xb_cr();
-        union() {
-            translate([0,-d_cr_d,0])
-            rotate([270,90,0]) {
-                translate([20/2,20/2,0])
-                    bolt_shcs_m3(h=20,v=true);
-                translate([-20/2,20/2,0])
-                    bolt_shcs_m3(h=20,v=true);
-                translate([20/2,-20/2,0])
-                    bolt_shcs_m3(h=20,v=true);
-                translate([-20/2,-20/2,0])
-                    bolt_shcs_m3(h=20,v=true);
-            }
-        }
+        xb_cr_mgn12h_bolts(h=8);
     }
     module _top_press() {
         difference() {
@@ -29,8 +33,8 @@ module xb_cr_mgn12h() {
 
     module _btm_press() {
         module _left() {
-            translate([10,0,-15.5])
-                cube([4,4,2]);
+            translate([11,0,-15.5])
+                cube([10,8,2]);
         }
         _left();
         mirror([1,0,0])
