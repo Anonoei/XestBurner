@@ -96,46 +96,49 @@ module _xb_fh_cr_mount() {
     }
 }
 
-module xb_fh() {
-    module _xb_fh_4010() {
-        module _xb_4010_base() {
-            translate([d_max_w/2-14,42+0.01,6.5])
-            rotate([90,90,0]) {
-                difference() {
-                    cube([44,2+10,42]);
-                    translate([40.01,3,-0.01])
-                        cube([20,12,42-5]);
-                }
+module _xb_fh_4010() {
+    module _xb_4010_base() {
+        translate([d_max_w/2-14,42+0.01,6.5])
+        rotate([90,90,0]) {
+            difference() {
+                cube([44,2+10,42]);
+                translate([40.01,3,-0.01])
+                    cube([20,12,42-5]);
+                translate([35.01,11.8,35.01])
+                cube([10,0.2+0.01,10]);
             }
-            _xb_fh_cr_mount();
         }
+        _xb_fh_cr_mount();
+    }
 
-        difference() {
-            union() {
+    difference() {
+        union() {
+            _xb_4010_base();
+            mirror([d_max_w,0,0])
                 _xb_4010_base();
-                mirror([d_max_w,0,0])
-                    _xb_4010_base();
-            }
-            union() {
-                xb_fh_4010_cut();
+        }
+        union() {
+            xb_fh_4010_cut();
 
-            }
         }
     }
-    module _xb_fh_2510() {
-        w = 25.5+3.5;
-        h = 25.5 + 3;
-        module _xb_2510_base() {
-            translate([0,0,0])
-                cube([w,11+1.2-0.01,h], center=true);
-        }
-        difference() {
-            _xb_2510_base();
-            translate([0,1,1.5+0.01])
-                xb_fh_2510_cut();
-        }
-    }
+}
 
+module _xb_fh_2510() {
+    w = 25.5+3.5;
+    h = 25.5 + 3;
+    module _xb_2510_base() {
+        translate([0,0,0])
+            cube([w,11+1.2-0.01,h], center=true);
+    }
+    difference() {
+        _xb_2510_base();
+        translate([0,1,1.5+0.01])
+            xb_fh_2510_cut();
+    }
+}
+
+module xb_fh() {
     module _xb_fh_wire() {
         rotate([0,-90,0])
         // cube([8,4,12]);
@@ -147,8 +150,6 @@ module xb_fh() {
                 ]
             );
     }
-
-    // _xb_fh_2510();
 
     union()
     difference() {
@@ -165,8 +166,6 @@ module xb_fh() {
         translate([-20,-10+0.01,-15])
         cube([40,4,14]);
     }
-
-
 }
 
 module xb_fh_brace() {

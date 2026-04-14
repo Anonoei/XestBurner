@@ -52,7 +52,6 @@
 5. Run the hotend cable through the hole near the bottom of the carriage, and up the channel towards the extruder
 6. Attach the faceplate
 
-
 ## Swapping parts
 - Swap/Reprint fan housing
   1. Release fan wires
