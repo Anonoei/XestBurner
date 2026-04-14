@@ -5,27 +5,31 @@
 ## Initial Assembly
 
 ### Prereqs
-- Install heatsets into carriage and hotend mount
-   1. ![image](XestBurner/media/demo_assembly-1heatsets_carriage.png)
-   2. ![image](XestBurner/media/demo_assembly-1heatsets_hotend.png)
-- If needed, install additional heatsets into variants
-- Install 2x M3x30 pins into the carriage, from the top
+1. Remove supports
+   - Carriage![image](XestBurner/media/demo_assembly-1supports_carriage.png)
+2. Install heatsets
+   - Carriage: ![image](XestBurner/media/demo_assembly-1heatsets_carriage.png)
+   - Hotend mount: ![image](XestBurner/media/demo_assembly-1heatsets_hotend.png)
+3. If needed, install additional heatsets into variants
+4. Install specific components
+   - Insert 2x M3x30 pins into the carriage, from the top![image](XestBurner/media/demo_assembly-1carriage_pins.png)
 
 ### Housing
-1. ![image](XestBurner/media/demo_assembly-2housing.png)
+1. Install 4010 blower fans ![image](XestBurner/media/demo_assembly-2housing.png)
    - Push 4010 fan cables through the slot in the housing
    - The fans will mostly press-fit in place. Ensure the open side of the fan is facing down, with the arrow pointing away from the side of the housing that's solid.
-2. ![image](XestBurner/media/demo_assembly-2housing_ducts.png)
+2. Press-fit ducts ![image](XestBurner/media/demo_assembly-2housing_ducts.png)
    - Slide the ducts over the housing and 4010 fans
 3. Put 2x M3x16 into each duct, with the bolts going through the holes in the fan
    - **These screw into plastic, be gentle**
 4. Press the 2510 fan into the front of the housing
 
 ### Hotend/extruder
-1. ![image](XestBurner/media/demo_assembly-3hotend.png)
-   - Bolt the hotend to the hotend mount. Try to make the cables face towards the back to make cable routing easier
-2. ![image](XestBurner/media/demo_assembly-3hotend_extruder.png)
-   - Bolt the extruder to the extruder mount, and then press-fit it onto the hotend mount
+1. Bolt hotend to mount ![image](XestBurner/media/demo_assembly-3hotend.png)
+   - Try to make the cables face towards the back to make cable routing easier
+2. Bolt extruder to mount
+3. Connect hotend and extruder mount ![image](XestBurner/media/demo_assembly-3hotend_extruder.png)
+   - Press fit from the back of the hotend mount
 
 ### Carriage
 1. Assemble your probe, and attach it to the probe mount

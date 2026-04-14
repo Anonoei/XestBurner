@@ -36,6 +36,11 @@ module xb_cr_heatsets() {
     xb_cr_hs_pr();
 }
 
+module xb_cr_support() {
+    translate([-d_cr_w/2,-d_cr_d,d_cr_ht+d_cr_em_h-d_cr_em_h+1])
+        cube([d_cr_w,d_cr_em_d-0.6,d_cr_em_h-1], center=false);
+}
+
 module xb_cr_pr() { // Probe mount
     module _xb_cr_pr() {
         module _xb_cr_pr_mount() {
