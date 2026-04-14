@@ -1,9 +1,9 @@
-module xb_fh_bolts() {
+module xb_fh_bolts(h=8,he=0) {
     module _xb_fh_bolt() {
-        translate([-d_m_fh_w/2+2,-14,d_m_fh_h-5.5])
+        translate([-d_m_fh_w/2+2.5,-14,d_m_fh_h-5.5])
         rotate([-90,90,0])
         translate([-5.5,2,0]) {
-            bolt_shcs_m3(10);
+            bolt_shcs_m3(h, he=he);
         }
     }
     _xb_fh_bolt();
@@ -28,19 +28,7 @@ module xb_du_bolts() {
 }
 
 module xb_fh_bolt_cut() {
-    module _xb_fh_bolt() {
-        translate([-d_max_w/2,-2,d_m_fh_h-5])
-        translate([14,40,0])
-        rotate([90,90,0])
-        translate([-5.5,2,0]) {
-            bolt(d=3, h=12);
-            translate([0,0,3+5])
-                bolt(d=6, h=12);
-        }
-    }
-    _xb_fh_bolt();
-    mirror([-d_max_w/2,0,0])
-        _xb_fh_bolt();
+    xb_fh_bolts(h=12,he=16);
 }
 
 module xb_fh_2510_cut() {
@@ -99,9 +87,9 @@ module xb_fh_4010_cut() {
 
 module _xb_fh_cr_mount() {
     translate([-14,37,d_m_fh_h-4])
-    rotate([0,0,-45])
+    rotate([0,0,-30])
     difference() {
-        rotate([0,0,45])
+        rotate([0,0,30])
             cube([5,5,8]);
         translate([-0.01, -0.01, -0.01])
         cube([10,10,10]);
@@ -128,8 +116,10 @@ module xb_fh() {
                 mirror([d_max_w,0,0])
                     _xb_4010_base();
             }
-            xb_fh_4010_cut();
-            xb_fh_bolt_cut();
+            union() {
+                xb_fh_4010_cut();
+
+            }
         }
     }
     module _xb_fh_2510() {
@@ -169,6 +159,7 @@ module xb_fh() {
                 _xb_fh_2510();
         }
         xb_du_bolts();
+        xb_fh_bolt_cut();
         translate([20,-12,-28])
             _xb_fh_wire();
         translate([-20,-10+0.01,-15])
@@ -189,13 +180,14 @@ module xb_fh_brace() {
                 _xb_fh_cr_mount();
             translate([0,d_he_c,-40])
                 cylinder(d=30,h=50);
-            translate([0,-42.01 - d_cr_d,-.5])
-                xb_fh_bolt_cut();
         }
     }
-    union() {
-        _fh_brace();
-        mirror([1,0,0])
+    difference() {
+        union() {
             _fh_brace();
+            mirror([1,0,0])
+                _fh_brace();
+        }
+        xb_fh_bolt_cut();
     }
 }
