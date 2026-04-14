@@ -22,15 +22,23 @@ module xb_cr_mgn9h() {
         difference() {
             translate([-d_m_he_w/2+5,0,d_cr_ht-5.5])
                 cube([d_m_he_w-10,4,4]);
-            translate([-d_cr_pr_wire/2,0-0.01,d_cr_ht-2-0.01])
+            translate([-d_cr_pr_wire/2,0-0.01,d_cr_ht-8-0.01])
                 cube([d_cr_pr_wire,6,8]);
         }
     }
 
     module _btm_press() {
         module _left() {
-            translate([10,0,-14])
-                cube([4,4,4]);
+            points = [
+                [0, 0], [5, 0],
+                [6, 1.5],
+                [11, 1.5], [11, 5.5],
+                [4, 5.5], [0, 2]
+            ];
+            translate([10,0,-10])
+            rotate([-90,0,0])
+            linear_extrude(8, convexity=2)
+                polygon(points);
         }
         _left();
         mirror([1,0,0])
