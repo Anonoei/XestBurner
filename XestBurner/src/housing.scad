@@ -1,6 +1,6 @@
 module xb_fh_bolts(h=8,he=0) {
     module _xb_fh_bolt() {
-        translate([-d_m_fh_w/2+2.5,-14,d_m_fh_h-5.5])
+        translate([-d_m_fh_w/2+2,-14,d_m_fh_h-5.5])
         rotate([-90,90,0])
         translate([-5.5,2,0]) {
             bolt_shcs_m3(h, he=he);
