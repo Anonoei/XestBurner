@@ -14,6 +14,18 @@ module measure_check() {
     echo("Bounds: width ", bound_w, ", depth: ", bound_d, ", height: ", bound_h);
 }
 
+module he_rapido() {
+    translate([0,d_he_c,d_he_hf])
+    rotate([0,0,90])
+        color([0.8,0.1,0.1,0.5]) ven_hotend_phaetus_rapido();
+}
+
+module he_chube() {
+    translate([0,d_he_c,d_he_uhf])
+    rotate([0,0,90])
+        color([0.8,0.1,0.1,0.5]) ven_hotend_chube();
+}
+
 module xb_base() {
     // Housing
     color(c_cl) xb_fh();
@@ -39,21 +51,24 @@ module xb_hf_var1() {
     color(c_y) xb_fh_brace();
     color(c_ol) xb_du_hf();
     // Carriage
-    color(c_pl) xb_cr_mgn12h();
-    // mgn12();
+    color(c_pl) xb_cr_mgn9h();
+    // color(c_pl) xb_cr_mgn12h();
+    // mgn9();
     // Hotend
     color(c_rl) xb_he_rapido();
     // Extruder
-    color(c_gl) xb_em_sherpa_mini();
+    // color(c_gl) xb_em_sherpa_mini();
     // Probe
-    color(c_ll) xb_pr_klicky_pcb_hf();
+    // color(c_ll) xb_pr_klicky_pcb_hf();
     // Faceplate
-    color(c_sl) xb_fp();
+    // color(c_sl) xb_fp();
 
-    xb_b_hf();
-    xb_hardware();
+    // xb_b_hf();
+    // xb_hardware();
     // xb_heatsets();
     // color(c_yl) xb_cr_mgn12h_bolts();
+
+    // xb_fh_bolt_cut();
 }
 
 module demo_uhf_var1() {
@@ -81,9 +96,15 @@ module demo_uhf_var1() {
     // color(c_yl) xb_cr_mgn12h_bolts();
 }
 
+
+
+
+
 // xb_base();
 xb_hf_var1();
 // demo_uhf_var1();
+
+he_rapido();
 
 // xb_hardware();
 // xb_heatsets();
