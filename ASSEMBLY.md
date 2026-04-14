@@ -32,19 +32,25 @@
    - Press fit from the back of the hotend mount
 
 ### Carriage
-1. Assemble your probe, and attach it to the probe mount
-2. Pull your belts, and push them through the slots on the carriage.
+1. Assemble your probe
+2. Attach probe mount to carriage
+   - ![image](XestBurner/media/demo_assembly-4probe.png)
+3. Pull your belts, and push them through the slots on the carriage.
    1. The belts will go around the M3 pins, and come out the other side.
    2. After putting all 4 belts through, bolt the carriage mount onto the linear rail, and pull the belts tight
-3. Attach the probe mount to the carriage
 
 ### Bring it together
-1. Attach the housing to the carriage, put 2x M3x8 bolts through the housing brace, through the housing, and into the 2x heatsets in the carriage
-   - It may help to lightly thread the bolts through the brace and into the housing prior to trying to attach to the carriage
-2. Press the hotend/extruder mounts onto the top of the housing. Route the fan cables to either side through the holes in the hotend mount
-3. Put the two M3x30 bolts through the hotend mount, through the extruder mount, and into the 2 heatsets on the carriage
-4. Run the hotend cable through the hole near the bottom of the carriage, and up the channel towards the extruder
-5. Attach the faceplate
+1. Attach housing to the carriage
+   - ![image](XestBurner/media/demo_assembly-5housing_carriage.png)
+   - Put 2x M3x8 bolts through the housing brace, through the housing, and into the 2x heatsets in the carriage
+     - It may help to lightly thread the bolts through the brace and into the housing prior to trying to attach to the carriage
+2. Attach hotend/extruder mounts to the carriage
+   - ![image](XestBurner/media/demo_assembly-5housing_hotend.png)
+   -  Press the hotend/extruder mounts onto the top of the housing
+   -  Route the fan cables to either side through the holes in the hotend mount
+4. Put the two M3x30 bolts through the hotend mount, through the extruder mount, and into the 2 heatsets on the carriage
+5. Run the hotend cable through the hole near the bottom of the carriage, and up the channel towards the extruder
+6. Attach the faceplate
 
 
 ## Swapping parts
